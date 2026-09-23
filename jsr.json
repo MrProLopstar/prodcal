@@ -4,6 +4,12 @@
   "license": "MIT",
   "exports": "./src/index.ts",
   "publish": {
-    "include": ["src/**/*.ts", "README.md", "LICENSE", "CHANGELOG.md"]
+    "include": [
+      "src/**/*.ts",
+      "README.md",
+      "LICENSE",
+      "CHANGELOG.md",
+      "README.ru.md"
+    ]
   }
 }

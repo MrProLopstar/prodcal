@@ -17,6 +17,8 @@
  *
  * Data from isdayoff.ru and xmlcalendar.ru, compared day by day. Dates outside the bundled years throw `ProdcalError`.
  *
+ * Документация на русском: https://github.com/MrProLopstar/prodcal/blob/main/README.ru.md
+ *
  * @module
  */
 export {
