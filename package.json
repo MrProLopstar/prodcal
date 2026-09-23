@@ -1,0 +1,57 @@
+{
+  "name": "prodcal",
+  "version": "0.1.0",
+  "description": "Russian production calendar for TypeScript: workdays, holidays, transfers and working-hour norms, offline",
+  "keywords": [
+    "production-calendar",
+    "производственный календарь",
+    "workdays",
+    "business-days",
+    "holidays",
+    "russia",
+    "calendar",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "MrProLopstar",
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrProLopstar/prodcal.git"
+  },
+  "homepage": "https://github.com/MrProLopstar/prodcal#readme",
+  "bugs": {
+    "url": "https://github.com/MrProLopstar/prodcal/issues"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "data": "node scripts/fetch-data.ts",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}

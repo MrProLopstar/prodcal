@@ -1,0 +1,38 @@
+name: Calendar data
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run data
+      - run: npm test
+      - name: Open pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- src/data.ts; then
+            echo "Calendar data is up to date"
+            exit 0
+          fi
+          branch="data/$(date -u +%Y-%m-%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git commit -am "Update production calendar data"
+          git push -u origin "$branch"
+          gh pr create --title "Update production calendar data" --body "New production calendar data from isdayoff.ru and xmlcalendar.ru. Both sources agree day by day; verify against the Government Decree before merging."

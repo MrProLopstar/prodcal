@@ -1,0 +1,50 @@
+[
+  {
+    "from": "2020-03-30",
+    "to": "2020-04-03",
+    "decree": "Presidential Decree No. 206 of 25.03.2020",
+    "shortDays": []
+  },
+  {
+    "from": "2020-04-04",
+    "to": "2020-04-30",
+    "decree": "Presidential Decree No. 239 of 02.04.2020",
+    "shortDays": [
+      "2020-04-30"
+    ]
+  },
+  {
+    "from": "2020-05-06",
+    "to": "2020-05-08",
+    "decree": "Presidential Decree No. 294 of 28.04.2020",
+    "shortDays": [
+      "2020-05-08"
+    ]
+  },
+  {
+    "from": "2020-06-24",
+    "to": "2020-06-24",
+    "decree": "Presidential Decree No. 345 of 29.05.2020",
+    "shortDays": []
+  },
+  {
+    "from": "2020-07-01",
+    "to": "2020-07-01",
+    "decree": "Presidential Decree No. 354 of 01.06.2020",
+    "shortDays": []
+  },
+  {
+    "from": "2021-05-04",
+    "to": "2021-05-07",
+    "decree": "Presidential Decree No. 242 of 23.04.2021",
+    "shortDays": []
+  },
+  {
+    "from": "2021-11-01",
+    "to": "2021-11-03",
+    "decree": "Presidential Decree No. 595 of 20.10.2021",
+    "shortDays": [
+      "2021-11-03"
+    ]
+  }
+]
