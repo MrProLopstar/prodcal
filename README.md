@@ -82,6 +82,10 @@ stats(2026, 1);                       // January 2026
 
 `npm run data` downloads every year from isdayoff.ru and xmlcalendar.ru and fails if the two disagree on any day. Resolved disagreements live in `data/overrides.json` and presidential non-working days in `data/nonworking.json`, each with the legal basis. A weekly GitHub Actions job opens a pull request when a new year is published.
 
+## Releasing
+
+Run **Actions → Release → Run workflow** and pick `patch`, `minor`, `major` or an exact version. The workflow bumps `package.json` and `jsr.json`, commits, tags, runs the tests and publishes to JSR and GitHub Packages with a GitHub release. Use `current` to release the version already in `package.json`. Pushing a `v*` tag by hand works too.
+
 ## License
 
 MIT
